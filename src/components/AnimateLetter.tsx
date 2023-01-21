@@ -50,11 +50,9 @@ const AnimateLetter = ({text,from,to,order=1,delayBetween = 0.08,transition=null
     }
 
     // Add a space ("\u00A0") to the end of each word
-  /*  words.map((word:any) => {
+    words.map((word:any) => {
         return word.push("\u00A0");
     });
-
-    words*/
 
     return (
         <>
