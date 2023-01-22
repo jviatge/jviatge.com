@@ -7,7 +7,8 @@ const backgroundAnim = {
 	},
 	animate: {
 		/*scale: 1,*/
-		rotate:45,
+		/*rotate:45,*/
+		rotate: [0, 0, 270, 270, 0],
 		opacity: 1,
 		transition: {
 			duration: 0.9

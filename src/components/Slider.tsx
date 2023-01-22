@@ -3,6 +3,7 @@ import AnimateLetter from "./AnimateLetter";
 import typewriterAnim from "../animations/text/typewriterAnim";
 import React from "react";
 import ScaleXAnim from "../animations/text/ScaleXAnim";
+import rotateAnim from "../animations/rotateAnim";
 
 export default function Slider ({variants,image,h3,h2,p}:any){
 
@@ -20,7 +21,9 @@ export default function Slider ({variants,image,h3,h2,p}:any){
 	}, 100);*/
 
 
-	return (<div className="mySlides fade flex justify-between h-full">
+	return (<motion.div
+		{...rotateAnim}
+		className="mySlides fade flex justify-between h-full">
 	<motion.div
 	style={{ position: 'relative'}}
 	className="w-1/2 h-full px-20">
@@ -36,7 +39,7 @@ export default function Slider ({variants,image,h3,h2,p}:any){
 			<motion.div
 				initial="initial"
 				animate="animate"
-				variants={variants}
+				/*variants={variants}*/
 				className="text-center w-full"
 			>
 				<h3 className="my-4 text-4xl font-allura">{h3}</h3>
@@ -57,5 +60,5 @@ export default function Slider ({variants,image,h3,h2,p}:any){
 			</motion.div>
 
 		</div>
-	</div>)
+	</motion.div>)
 }

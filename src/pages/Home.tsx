@@ -14,6 +14,7 @@ import pageBaseAnim from "../animations/pageBaseAnim";
 import backgroundAnim from "../animations/backgroundAnim";
 import typewriterAnim from "../animations/text/typewriterAnim";
 import AnimateLetter from "../components/AnimateLetter";
+import rotateAnim from "../animations/rotateAnim";
 export default function Home() {
 
   const [count, setCount] = useState(0)
@@ -64,7 +65,7 @@ export default function Home() {
           <div className="slideshow-container h-full">
 
                <Slider
-                variants={fadeInUp}
+                variants={rotateAnim}
                 image={image}
                 h3={data.hero.subTitle}
                 h2={data.hero.title}
